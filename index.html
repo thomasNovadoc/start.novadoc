@@ -10,15 +10,18 @@
             position: relative;
             display: inline-block;
             width: 16%; /* Each button takes 16% of the window width */
+            margin: 0 10px; /* Add some spacing between dropdowns */
         }
 
         .dropdown-content {
             display: none;
             position: absolute;
-            background-color: #f9f9f9;
+            background-color: #fff;
             min-width: 160px;
             box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
             z-index: 1;
+            border-radius: 5px;
+            padding: 10px 0;
         }
 
         .dropdown-content.show {
@@ -27,9 +30,10 @@
 
         .dropdown-content a {
             color: #235A70; /* Menu text color */
-            padding: 12px 16px;
+            padding: 10px 20px;
             text-decoration: none;
             display: block;
+            transition: background-color 0.3s ease;
         }
 
         .dropdown-content a:hover {
@@ -39,7 +43,7 @@
         /* CSS for header */
         h1 {
             text-align: center;
-            margin-top: 20px;
+            margin-top: 40px;
             color: #235A70; /* Header text color */
         }
 
@@ -54,10 +58,13 @@
             box-sizing: border-box; /* Includes padding and border in the width */
             text-align: center;
             position: relative;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
         }
 
-        .dropbtn:hover, .dropbtn:focus {
-            text-decoration: underline;
+        .dropbtn:hover {
+            background-color: #e0e0e0;
         }
 
         /* Line underneath the menu text */
@@ -82,36 +89,36 @@
 </head>
 <body>
 
-<h1>Novadoc startpagina</h1>
+<h1><img src="Blokje_Novadoc_HR_RGB.png" alt="Novadoc Logo" height="50"> Novadoc startpagina</h1>
 
 <div class="dropdown">
-    <button class="dropbtn" onclick="toggleDropdown(event)">Novadoc links</button>
+    <button class="dropbtn" onclick="toggleDropdown(event)">Novadoc Links</button>
     <div class="dropdown-content" id="dropdown1">
         <a href="http://www.novadoc.nl/">Novadoc.nl</a>
         <a href="https://novadoc.box.com/">BOX</a>
         <a href="https://app.declaree.com/">Declaree</a>
         <a href="https://novadoc-deskiq.live.wem.io/">Desk IQ</a>
-		<a href="https://start.exactonline.nl/">Exact Online</a>
-		<a href="https://console-openshift-console.apps.ocp.novadoc.com/">Openshift console</a>
-		<a href="https://otrs.novadoc.nl/otrs/index.pl">Support</a>
-		<a href="https://novadoc.atlassian.net/wiki">Confluence</a>
-		<a href="https://novadoc.app.box.com/file/998642021112">Smoelenboek</a>
-		<a href="https://novadoc.box.com/v/OutlookHandtekening">Instellen Outlook signature</a>
-		<a href="https://outlook.office365.com/">O365 Webmail</a>
-		<a href="https://goo.gl/svXXWL">Novadoc Box customer upload</a>
-		<a href="https://get.teamviewer.com/b3bukx5">Teamviewer Quicksupport</a>
-		
+        <a href="https://start.exactonline.nl/">Exact Online</a>
+        <a href="https://console-openshift-console.apps.ocp.novadoc.com/">Openshift console</a>
+        <a href="https://otrs.novadoc.nl/otrs/index.pl">Support</a>
+        <a href="https://novadoc.atlassian.net/wiki">Confluence</a>
+        <a href="https://novadoc.app.box.com/file/998642021112">Smoelenboek</a>
+        <a href="https://novadoc.box.com/v/OutlookHandtekening">Instellen Outlook signature</a>
+        <a href="https://outlook.office365.com/">O365 Webmail</a>
+        <a href="https://goo.gl/svXXWL">Novadoc Box customer upload</a>
+        <a href="https://get.teamviewer.com/b3bukx5">Teamviewer Quicksupport</a>
     </div>
 </div>
+
 <div class="dropdown">
     <button class="dropbtn" onclick="toggleDropdown(event)">IBM Training</button>
     <div class="dropdown-content">
         <a href="https://www.onlinedigitallearning.com/">IBM ECM Learner Portal</a>
-		<a href="https://www.ibm.com/training/search?query="> IBM Training</a>
-		<a href="http://www-03.ibm.com/certify/">IBM ECM Certification</a>
-		<a href="https://www-03.ibm.com/services/learning/ites.wss/zz-en?pageType=page&c=a0003096">IBM ECM Training paths</a>
-		<a href="https://www-03.ibm.com/services/learning/ites.wss/zz-en?pageType=page&c=M425350C34234U21">IBM Open Badge Program</a>
-		<a href="https://www14.software.ibm.com/webapp/iwm/web/preLogin.do?source=swg-imskill&S_PKG=SWVN">IBM Request Learner Portal Access</a>
+        <a href="https://www.ibm.com/training/search?query="> IBM Training</a>
+        <a href="http://www-03.ibm.com/certify/">IBM ECM Certification</a>
+        <a href="https://www-03.ibm.com/services/learning/ites.wss/zz-en?pageType=page&c=a0003096">IBM ECM Training paths</a>
+        <a href="https://www-03.ibm.com/services/learning/ites.wss/zz-en?pageType=page&c=M425350C34234U21">IBM Open Badge Program</a>
+        <a href="https://www14.software.ibm.com/webapp/iwm/web/preLogin.do?source=swg-imskill&S_PKG=SWVN">IBM Request Learner Portal Access</a>
     </div>
 </div>
 
@@ -119,8 +126,8 @@
     <button class="dropbtn" onclick="toggleDropdown(event)">IBM Software download</button>
     <div class="dropdown-content">
         <a href="http://www-933.ibm.com/support/fixcentral/">IBM ECM FixCentral</a>
-		<a href="https://www.ibm.com/partnerworld/partnertools/eorderweb/ordersw.do">IBM Partnerworld Software Downloads</a>
-		<a href="https://www.ibm.com/support/pages/node/321543">IBM Fixpack Compatibility Matrices</a>
+        <a href="https://www.ibm.com/partnerworld/partnertools/eorderweb/ordersw.do">IBM Partnerworld Software Downloads</a>
+        <a href="https://www.ibm.com/support/pages/node/321543">IBM Fixpack Compatibility Matrices</a>
     </div>
 </div>
 
@@ -128,15 +135,14 @@
     <button class="dropbtn" onclick="toggleDropdown(event)">IBM Product documentation</button>
     <div class="dropdown-content">
         <a href="https://www-304.ibm.com/support/docview.wss?uid=swg27010422">IBM Product Documentation</a>
-		<a href="https://www.ibm.com/support/knowledgecenter/en/SSNW2F_5.5.0/com.ibm.p8toc.doc/welcome_p8.htm">IBM FileNet P8 5.5 Information Center</a>
-		<a href="https://www.ibm.com/support/knowledgecenter/SSCTJ4_5.3.3/com.ibm.casemgmttoc.doc/casemanager_5.3.3.htm">IBM Case Manager Information Center</a>
-		<a href="https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation">IBM Cloudpak for Automation Information Center</a>
-		<a href="http://www-01.ibm.com/support/knowledgecenter/SSAE9L_4.0.0/contentcollector_4.0.0.htm">IBM Content Collector 4.0 Information Center</a>
-		<a href="https://www.ibm.com/support/knowledgecenter/SSRW2R_4.0.0/contentcollectorforsap_welcome_4.0.0.html">IBM Content Collector 4.0 for SAP Information Center</a>
-		<a href="https://www.ibm.com/docs/en/content-navigator/3.0.x">IBM Content Navigator 3.0.x Information Center</a>
-		<a href="https://www.ibm.com/support/knowledgecenter/SS8JB4_20.x/com.ibm.wbpm.workflow.main.doc/kc-homepage-workflow.html">IBM Business Automation Workflow 20.x Information Center</a>
-		<a href="https://www.ibm.com/support/knowledgecenter/en/SSNVVQ_5.2.1/enterpriserecords_5.2.1/enterpriserecords_5.2.1.html">IBM Enterprise Records 5.2.1 Information Center</a>
-		
+        <a href="https://www.ibm.com/support/knowledgecenter/en/SSNW2F_5.5.0/com.ibm.p8toc.doc/welcome_p8.htm">IBM FileNet P8 5.5 Information Center</a>
+        <a href="https://www.ibm.com/support/knowledgecenter/SSCTJ4_5.3.3/com.ibm.casemgmttoc.doc/casemanager_5.3.3.htm">IBM Case Manager Information Center</a>
+        <a href="https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation">IBM Cloudpak for Automation Information Center</a>
+        <a href="http://www-01.ibm.com/support/knowledgecenter/SSAE9L_4.0.0/contentcollector_4.0.0.htm">IBM Content Collector 4.0 Information Center</a>
+        <a href="https://www.ibm.com/support/knowledgecenter/SSRW2R_4.0.0/contentcollectorforsap_welcome_4.0.0.html">IBM Content Collector 4.0 for SAP Information Center</a>
+        <a href="https://www.ibm.com/docs/en/content-navigator/3.0.x">IBM Content Navigator 3.0.x Information Center</a>
+        <a href="https://www.ibm.com/support/knowledgecenter/SS8JB4_20.x/com.ibm.wbpm.workflow.main.doc/kc-homepage-workflow.html">IBM Business Automation Workflow 20.x Information Center</a>
+        <a href="https://www.ibm.com/support/knowledgecenter/en/SSNVVQ_5.2.1/enterpriserecords_5.2.1/enterpriserecords_5.2.1.html">IBM Enterprise Records 5.2.1 Information Center</a>
     </div>
 </div>
 
@@ -144,8 +150,8 @@
     <button class="dropbtn" onclick="toggleDropdown(event)">IBM Partnerworld</button>
     <div class="dropdown-content">
         <a href="https://www.ibm.com/partnerworld/partnertools/eorderweb/ordersw.do">IBM Partnerworld Software Downloads</a>
-		<a href="https://www.ibm.com/partnerworld/partnertools/">IBM Partnerworld partner tools</a>
-		<a href="https://www-304.ibm.com/partnerworld/wps/servlet/mem/spg/ibm_software_product_and_capabilities_navigator/">IBM Software Product and Capabilities Navigator</a>
+        <a href="https://www.ibm.com/partnerworld/partnertools/">IBM Partnerworld partner tools</a>
+        <a href="https://www-304.ibm.com/partnerworld/wps/servlet/mem/spg/ibm_software_product_and_capabilities_navigator/">IBM Software Product and Capabilities Navigator</a>
     </div>
 </div>
 
@@ -153,13 +159,13 @@
     <button class="dropbtn" onclick="toggleDropdown(event)">IBM Support/tech</button>
     <div class="dropdown-content">
         <a href="http://publib.boulder.ibm.com/infocenter/prodguid/v1r0/clarity/softwareReqsForProduct.html">IBM Detailed system requirements for a specific product</a>
-		<a href="https://www.ibm.com/support/pages/node/321543">IBM Fixpack Compatibility Matrices</a>
-		<a href="https://www.ibm.com/software/reports/compatibility/clarity/softwareEos.html">IBM End of Service reports</a>
-		<a href="https://www.ibm.com/support/pages/node/6474273">IBM  Support Schedule for CPE / ICN</a>
-		<a href="http://www-01.ibm.com/software/support/lifecycle/index_f.html">IBM Support Lifecycle</a>
-		<a href="http://www.ibm.com/developerworks/">IBM Developerworks</a>
-		<a href="http://www.ibm.com/support">IBM Support Portal</a>
-		<a href="https://dba.ideas.ibm.com/ideas/new">IBM Digital Business Automation Idea's (RFE)</a>
+        <a href="https://www.ibm.com/support/pages/node/321543">IBM Fixpack Compatibility Matrices</a>
+        <a href="https://www.ibm.com/software/reports/compatibility/clarity/softwareEos.html">IBM End of Service reports</a>
+        <a href="https://www.ibm.com/support/pages/node/6474273">IBM  Support Schedule for CPE / ICN</a>
+        <a href="http://www-01.ibm.com/software/support/lifecycle/index_f.html">IBM Support Lifecycle</a>
+        <a href="http://www.ibm.com/developerworks/">IBM Developerworks</a>
+        <a href="http://www.ibm.com/support">IBM Support Portal</a>
+        <a href="https://dba.ideas.ibm.com/ideas/new">IBM Digital Business Automation Idea's (RFE)</a>
     </div>
 </div>
 
